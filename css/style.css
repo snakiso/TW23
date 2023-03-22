@@ -169,6 +169,18 @@ main {
   color: #61D3FF;
 }
 
+.content .addeventatc {
+  background: none !important;
+  box-shadow: none !important;
+  color: white !important;
+  padding: 0;
+  display: flex;
+}
+
+.addeventatc_icon {
+  display: none;
+}
+
 .footer {
   z-index: 5;
   position: relative;
@@ -325,18 +337,19 @@ main {
   }
 
   .content__title {
-    font-size: 30px;
+    font-size: 8.5vw;
     max-width: 420px;
+    margin-top: 0;
   }
 
   .content__year {
-    font-size: 30px;
+    font-size: 8.5vw;
     margin-top: 15px;
     margin-bottom: 45px;
   }
 
   .content__date {
-    font-size: 26px;
+    font-size: 7vw;
   }
 
   .content__place {
@@ -371,5 +384,15 @@ main {
 
   .archive {
     display: none;
+  }
+}
+
+@media screen and (max-height: 560px) {
+  main {
+    min-height: 600px;
+  }
+
+  .decor {
+    min-height: 600px;
   }
 }
