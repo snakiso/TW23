@@ -22,6 +22,10 @@ body {
   width: 100%;
 }
 
+.page {
+  height: 100%;
+}
+
 main {
   height: 100vh;
   position: relative;
@@ -279,6 +283,20 @@ main {
 }
 
 @media screen and (max-width: 768px) {
+  html {
+    height: 100%;
+  }
+
+  body {
+    height: 100%;
+    min-height: auto;
+  }
+
+  main {
+    height: auto;
+    min-height: 100%;
+  }
+
   .wrapper {
     max-width: 100%;
     padding: 0 15px;
