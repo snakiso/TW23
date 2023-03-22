@@ -151,8 +151,11 @@ main {
   color: #61D3FF;
 }
 
-.content__link {
-  color: white;
+.content .addeventatc {
+  background: none !important;
+  box-shadow: none !important;
+  color: white !important;
+  padding: 0;
   display: flex;
   align-items: center;
   margin-top: 25px;
@@ -161,20 +164,13 @@ main {
   transition: all 0.3s;
 }
 
-.content__link img {
+.content .addeventatc img {
   margin-right: 10px;
 }
 
-.content__link:hover {
-  color: #61D3FF;
-}
-
-.content .addeventatc {
-  background: none !important;
-  box-shadow: none !important;
-  color: white !important;
-  padding: 0;
-  display: flex;
+.content .addeventatc:hover {
+  color: #61D3FF !important;
+  font-size: 18px;
 }
 
 .addeventatc_icon {
