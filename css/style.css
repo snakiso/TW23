@@ -22,10 +22,6 @@ body {
   width: 100%;
 }
 
-.page {
-  height: 100%;
-}
-
 main {
   height: 100vh;
   position: relative;
