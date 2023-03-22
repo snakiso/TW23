@@ -26,6 +26,9 @@ main {
   height: 100vh;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .wrapper {
@@ -126,7 +129,7 @@ main {
   text-transform: uppercase;
   font-weight: 700;
   margin-top: 10px;
-  margin-bottom: 70px;
+  margin-bottom: 3%;
 }
 
 .content__date {
@@ -164,7 +167,7 @@ main {
 
 .footer {
   z-index: 5;
-  position: absolute;
+  position: relative;
   width: 1200px;
   height: 90px;
   left: 50%;
@@ -272,7 +275,7 @@ main {
   }
 
   .decor {
-    width: 120%;
+    width: 130%;
   }
 
   .header__link {
