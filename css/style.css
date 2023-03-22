@@ -162,10 +162,10 @@ main {
 
 .content .addeventatc img {
   margin-right: 10px;
+  transition: all 0.3s;
 }
 
 .content .addeventatc:hover {
-  color: #61D3FF !important;
   font-size: 18px;
 }
 
