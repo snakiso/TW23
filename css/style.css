@@ -160,13 +160,21 @@ main {
   transition: all 0.3s;
 }
 
-.content .addeventatc img {
+.content .addeventatc svg {
   margin-right: 10px;
+}
+
+.content .addeventatc .svg {
   transition: all 0.3s;
 }
 
 .content .addeventatc:hover {
   font-size: 18px;
+  color: #61D3FF !important;
+}
+
+.content .addeventatc:hover .svg {
+  fill: #61D3FF;
 }
 
 .addeventatc_icon {
