@@ -1,0 +1,18 @@
+.header {
+ padding-top: 30px;
+
+ .wrapper {
+  display: flex;
+ }
+
+ &__link {
+  margin-right: 60px;
+ }
+
+ @media screen and (max-width: 768px) {
+  &__link {
+   max-height: 35px;
+   margin-right: 20px;
+  }
+ }
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html',{
+"title": "Транспортная неделя"
+})
+
+<body>
+  <div class="page">
+    <main class="main">
+      <video src="./files/videoplayback.mp4" autoplay="autoplay" loop="loop" muted="muted" preload="metadata"
+        playsinline class='video hidden'></video>
+      <div class="decor">
+        <img src="@img/decor.png" alt="">
+      </div>
+      @@include('html/header.html',{})
+      @@include('html/own-content.html',{})
+      @@include('html/footer.html',{})
+      <div class="decor-bottom">
+        <img src="@img/decor-bottom.png" alt="">
+      </div>
+    </main>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+
+</html>

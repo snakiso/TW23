@@ -1,0 +1,14 @@
+.video {
+ position: absolute;
+ height: 100vh;
+ display: block;
+ width: 100vw;
+ object-fit: cover;
+ transition: all .3s;
+ opacity: 1;
+
+ &.hidden{
+  opacity: 0;
+
+ }
+}

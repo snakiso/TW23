@@ -2,16 +2,11 @@
   box-sizing: border-box;
 }
 
-a {
-  text-decoration: none;
-  display: block;
-}
-
-span {
-  display: block;
-}
-
 body {
+  margin: 0;
+}
+
+.page {
   position: relative;
   margin: 0;
   font-family: "Montserrat", sans-serif;
@@ -22,7 +17,7 @@ body {
   width: 100%;
 }
 
-main {
+.main {
   height: 100vh;
   position: relative;
   overflow: hidden;
@@ -36,65 +31,6 @@ main {
   z-index: 5;
   max-width: 1200px;
   margin: auto;
-}
-
-.timer {
-  font-family: "Bebas Neue", cursive;
-  color: white;
-}
-
-.timer__items {
-  display: flex;
-}
-
-.timer__item {
-  position: relative;
-  margin-right: 100px;
-  font-size: 55px;
-}
-
-.timer__item:last-child {
-  margin-right: 20px;
-}
-
-.timer__item::before {
-  content: attr(data-title);
-  display: block;
-  position: absolute;
-  left: 50%;
-  bottom: -10px;
-  transform: translateX(-50%);
-  font-size: 18px;
-  font-family: "Montserrat", sans-serif;
-}
-
-.timer__item:not(:last-child)::after {
-  content: ":";
-  position: absolute;
-  right: -50px;
-}
-
-.decor {
-  z-index: 3;
-  left: 0;
-  top: 0;
-  position: absolute;
-  height: 100vh;
-  width: 55%;
-}
-
-.decor img {
-  height: 100%;
-  width: 100%;
-}
-
-.decor-bottom {
-  position: absolute;
-  bottom: 0;
-}
-
-.decor-bottom img {
-  display: block;
 }
 
 .header {
@@ -130,9 +66,11 @@ main {
   font-weight: 700;
   margin-top: 10px;
   margin-bottom: 3%;
+  display: block;
 }
 
 .content__date {
+  display: block;
   font-weight: 600;
   font-size: 34px;
   line-height: 120%;
@@ -141,6 +79,7 @@ main {
 }
 
 .content__place {
+  display: block;
   font-weight: 500;
   font-size: 18px;
   line-height: 120%;
@@ -194,11 +133,28 @@ main {
   justify-content: space-between;
 }
 
+.video {
+  position: absolute;
+  height: 100vh;
+  display: block;
+  width: 100vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all 0.3s;
+  opacity: 1;
+}
+
+.video.hidden {
+  opacity: 0;
+}
+
 .archive-mobile {
   display: none;
+  text-decoration: none;
 }
 
 .archive {
+  text-decoration: none;
   display: flex;
   align-items: center;
   color: white;
@@ -216,26 +172,66 @@ main {
   margin-left: 20px;
 }
 
-.video {
+.decor {
+  z-index: 3;
+  left: 0;
+  top: 0;
   position: absolute;
   height: 100vh;
-  display: block;
-  width: 100vw;
-  -o-object-fit: cover;
-     object-fit: cover;
-  transition: all 0.3s;
-  opacity: 1;
+  width: 55%;
 }
 
-.video.hidden {
-  opacity: 0;
+.decor img {
+  height: 100%;
+  width: 100%;
+}
+
+.decor-bottom {
+  position: absolute;
+  bottom: 0;
+}
+
+.decor-bottom img {
+  display: block;
+}
+
+.timer {
+  font-family: "Bebas Neue", cursive;
+  color: white;
+}
+
+.timer__items {
+  display: flex;
+}
+
+.timer__item {
+  position: relative;
+  margin-right: 100px;
+  font-size: 55px;
+}
+
+.timer__item:last-child {
+  margin-right: 20px;
+}
+
+.timer__item::before {
+  content: attr(data-title);
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.timer__item:not(:last-child)::after {
+  content: ":";
+  position: absolute;
+  right: -50px;
 }
 
 @media screen and (max-width: 1400px) {
-  .decor-bottom {
-    height: 140px;
-  }
-
   .content__title {
     font-size: 45px;
     max-width: 450px;
@@ -261,20 +257,15 @@ main {
   .footer {
     bottom: 25px;
   }
+
+  .decor-bottom {
+    height: 140px;
+  }
 }
 
 @media screen and (max-width: 1200px) {
   .wrapper {
     max-width: 768px;
-  }
-
-  .timer__item {
-    font-size: 45px;
-    margin-right: 60px;
-  }
-
-  .timer__item:not(:last-child)::after {
-    right: -35px;
   }
 
   .content__title {
@@ -292,6 +283,15 @@ main {
   .footer {
     width: 768px;
   }
+
+  .timer__item {
+    font-size: 45px;
+    margin-right: 60px;
+  }
+
+  .timer__item:not(:last-child)::after {
+    right: -35px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -299,36 +299,18 @@ main {
     height: 100%;
   }
 
-  body {
+  .page {
     height: 100%;
     min-height: auto;
   }
 
-  main {
-    height: auto;
+  .main {
     min-height: 100%;
   }
 
   .wrapper {
     max-width: 100%;
     padding: 0 15px;
-  }
-
-  .timer__item {
-    font-size: 36px;
-    margin-right: 50px;
-  }
-
-  .timer__item::before {
-    font-size: 12px;
-  }
-
-  .timer__item:not(:last-child)::after {
-    right: -30px;
-  }
-
-  .decor {
-    width: 130%;
   }
 
   .header__link {
@@ -385,10 +367,27 @@ main {
   .archive {
     display: none;
   }
+
+  .decor {
+    width: 130%;
+  }
+
+  .timer__item {
+    font-size: 36px;
+    margin-right: 50px;
+  }
+
+  .timer__item::before {
+    font-size: 12px;
+  }
+
+  .timer__item:not(:last-child)::after {
+    right: -30px;
+  }
 }
 
 @media screen and (max-height: 560px) {
-  main {
+  .main {
     min-height: 600px;
   }
 
