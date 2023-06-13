@@ -12,7 +12,7 @@
     transition: all .3s;
   }
 
-  &__arrow_mobile {
+  &__arrow {
     margin-left: 15px;
   }
 
@@ -21,9 +21,11 @@
     display: none;
   }
 
-  &:hover {
-    .button__arrow {
-      margin-left: 20px;
+  &_desktop {
+    &:hover {
+      .button__arrow {
+        margin-left: 20px;
+      }
     }
   }
 
@@ -42,5 +44,3 @@
     }
   }
 }
-
-

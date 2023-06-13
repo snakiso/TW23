@@ -187,7 +187,7 @@ body {
   transition: all 0.3s;
 }
 
-.button__arrow_mobile {
+.button__arrow {
   margin-left: 15px;
 }
 
@@ -196,7 +196,7 @@ body {
   display: none;
 }
 
-.button:hover .button__arrow {
+.button_desktop:hover .button__arrow {
   margin-left: 20px;
 }
 
