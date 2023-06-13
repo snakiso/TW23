@@ -7,14 +7,24 @@
   height: 50px;
   padding: 0 14px;
 
-  img {
+  &__arrow {
     margin-left: 10px;
     transition: all .3s;
+  }
+
+  &__arrow_mobile {
+    margin-left: 15px;
   }
 
   &_mobile {
     margin-top: 30px;
     display: none;
+  }
+
+  &:hover {
+    .button__arrow {
+      margin-left: 20px;
+    }
   }
 
   @media screen and (max-width: 768px) {
@@ -23,7 +33,7 @@
     height: 40px;
     display: none;
 
-    img {
+    &__arrow {
       margin-left: 15px;
     }
 
@@ -33,14 +43,4 @@
   }
 }
 
-.button.button_mobile:hover {
-  img {
-    margin-left: 15px;
-  }
-}
 
-.button:hover {
-  img {
-    margin-left: 20px;
-  }
-}

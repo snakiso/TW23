@@ -182,9 +182,13 @@ body {
   padding: 0 14px;
 }
 
-.button img {
+.button__arrow {
   margin-left: 10px;
   transition: all 0.3s;
+}
+
+.button__arrow_mobile {
+  margin-left: 15px;
 }
 
 .button_mobile {
@@ -192,11 +196,7 @@ body {
   display: none;
 }
 
-.button.button_mobile:hover img {
-  margin-left: 15px;
-}
-
-.button:hover img {
+.button:hover .button__arrow {
   margin-left: 20px;
 }
 
@@ -350,7 +350,7 @@ body {
     display: none;
   }
 
-  .button img {
+  .button__arrow {
     margin-left: 15px;
   }
 
