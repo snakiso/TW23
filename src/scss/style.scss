@@ -7,16 +7,6 @@ body {
   margin: 0;
 }
 
-.page {
-  position: relative;
-  margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  min-height: 100vh;
-  background: url(../img/bg.png);
-  background-position: 0 75%;
-  background-repeat: no-repeat;
-  width: 100%;
-}
 
 .main {
   height: 100vh;
@@ -44,11 +34,9 @@ body {
 }
 
 
-
+@import 'startscreen';
 @import 'logo-block';
 @import 'content';
-@import 'bottom-line';
 @import 'video';
 @import 'button';
-@import 'decor';
 @import 'timer';

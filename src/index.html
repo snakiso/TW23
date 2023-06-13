@@ -5,17 +5,17 @@
 })
 
 <body>
-  <div class="page">
+  <div class="startscreen">
     <main class="main">
       <video src="./files/videoplayback.mp4" autoplay="autoplay" loop="loop" muted="muted" preload="metadata"
         playsinline class='video hidden'></video>
-      <div class="decor">
+      <div class="startscreen__decor">
         <img src="@img/decor.png" alt="">
       </div>
       @@include('html/logo-block.html',{})
       @@include('html/own-content.html',{})
-      @@include('html/footer.html',{})
-      <div class="decor-bottom">
+      @@include('html/bottom-line.html',{})
+      <div class="startscreen__decor-bottom">
         <img src="@img/decor-bottom.png" alt="">
       </div>
     </main>
