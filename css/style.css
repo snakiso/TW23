@@ -15,11 +15,13 @@ body {
   justify-content: space-between;
 }
 
-.wrapper {
+.main {
+  height: 100vh;
   position: relative;
-  z-index: 5;
-  max-width: 1200px;
-  margin: auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .startscreen {
@@ -67,6 +69,81 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.startscreen__content .addeventatc {
+  background: none !important;
+  box-shadow: none !important;
+  color: white !important;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+  font-weight: 400;
+  font-size: 18px;
+  transition: all 0.3s;
+}
+
+.startscreen__content .addeventatc svg {
+  margin-right: 10px;
+}
+
+.startscreen__content .addeventatc .svg {
+  transition: all 0.3s;
+}
+
+.startscreen__content .addeventatc:hover {
+  font-size: 18px;
+  color: #61D3FF !important;
+}
+
+.startscreen__content .addeventatc:hover .svg {
+  fill: #61D3FF;
+}
+
+.startscreen__title {
+  font-size: 60px;
+  color: white;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+  font-weight: 800;
+  max-width: 750px;
+  margin-bottom: 0;
+  line-height: 105%;
+  margin-top: 24px;
+}
+
+.startscreen__year {
+  color: rgb(40, 176, 173);
+  font-size: 60px;
+  line-height: 103%;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 3%;
+  display: block;
+}
+
+.startscreen__date {
+  display: block;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 120%;
+  letter-spacing: 0.035em;
+  color: #61D3FF;
+}
+
+.startscreen__place {
+  display: block;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 120%;
+  color: #61D3FF;
+}
+
+.addeventatc_icon {
+  display: none;
 }
 
 .logo-block {
@@ -121,40 +198,6 @@ body {
   font-size: 18px;
   line-height: 120%;
   color: #61D3FF;
-}
-
-.content .addeventatc {
-  background: none !important;
-  box-shadow: none !important;
-  color: white !important;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  margin-top: 25px;
-  font-weight: 400;
-  font-size: 18px;
-  transition: all 0.3s;
-}
-
-.content .addeventatc svg {
-  margin-right: 10px;
-}
-
-.content .addeventatc .svg {
-  transition: all 0.3s;
-}
-
-.content .addeventatc:hover {
-  font-size: 18px;
-  color: #61D3FF !important;
-}
-
-.content .addeventatc:hover .svg {
-  fill: #61D3FF;
-}
-
-.addeventatc_icon {
-  display: none;
 }
 
 .video {
@@ -236,6 +279,13 @@ body {
   right: -50px;
 }
 
+.wrapper {
+  position: relative;
+  z-index: 5;
+  max-width: 1200px;
+  margin: auto;
+}
+
 @media screen and (max-width: 1400px) {
   .startscreen__decor-bottom {
     height: 140px;
@@ -245,47 +295,43 @@ body {
     bottom: 25px;
   }
 
-  .content__title {
+  .startscreen__title {
     font-size: 45px;
     max-width: 450px;
     margin-top: -35px;
   }
 
-  .content__year {
+  .startscreen__year {
     font-size: 45px;
   }
 
-  .content__date {
+  .startscreen__date {
     font-size: 28px;
   }
 
-  .content__place {
+  .startscreen__place {
     font-size: 16px;
   }
 
-  .content__link {
+  .startscreen__link {
     font-size: 16px;
   }
 }
 
 @media screen and (max-width: 1200px) {
-  .wrapper {
-    max-width: 768px;
-  }
-
   .startscreen__bottom-line {
     width: 768px;
   }
 
-  .content__title {
+  .startscreen__title {
     font-size: 40px;
   }
 
-  .content__year {
+  .startscreen__year {
     font-size: 40px;
   }
 
-  .content__date {
+  .startscreen__date {
     font-size: 26px;
   }
 
@@ -297,14 +343,13 @@ body {
   .timer__item:not(:last-child)::after {
     right: -35px;
   }
+
+  .wrapper {
+    max-width: 768px;
+  }
 }
 
 @media screen and (max-width: 768px) {
-  .wrapper {
-    max-width: 100%;
-    padding: 0 15px;
-  }
-
   .startscreen__decor {
     width: 130%;
   }
@@ -314,33 +359,33 @@ body {
     width: calc(100% - 30px);
   }
 
-  .logo-block__link {
-    max-height: 35px;
-    margin-right: 20px;
-  }
-
-  .content__title {
+  .startscreen__title {
     font-size: 8.5vw;
     max-width: 420px;
     margin-top: 0;
   }
 
-  .content__year {
+  .startscreen__year {
     font-size: 8.5vw;
     margin-top: 15px;
     margin-bottom: 45px;
   }
 
-  .content__date {
+  .startscreen__date {
     font-size: 7vw;
   }
 
-  .content__place {
+  .startscreen__place {
     font-size: 14px;
   }
 
-  .content__link {
+  .startscreen__link {
     font-size: 14px;
+  }
+
+  .logo-block__link {
+    max-height: 35px;
+    margin-right: 20px;
   }
 
   .button {
@@ -369,6 +414,11 @@ body {
 
   .timer__item:not(:last-child)::after {
     right: -30px;
+  }
+
+  .wrapper {
+    max-width: 100%;
+    padding: 0 15px;
   }
 }
 
