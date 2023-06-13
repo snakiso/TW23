@@ -1,8 +1,9 @@
-.header {
+.logo-block {
  padding-top: 30px;
 
- .wrapper {
+ &__wrapper {
   display: flex;
+  align-items: center;
  }
 
  &__link {

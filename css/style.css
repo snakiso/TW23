@@ -33,15 +33,16 @@ body {
   margin: auto;
 }
 
-.header {
+.logo-block {
   padding-top: 30px;
 }
 
-.header .wrapper {
+.logo-block__wrapper {
   display: flex;
+  align-items: center;
 }
 
-.header__link {
+.logo-block__link {
   margin-right: 60px;
 }
 
@@ -120,7 +121,7 @@ body {
   display: none;
 }
 
-.footer {
+.bottom-line {
   z-index: 4;
   position: relative;
   width: 1200px;
@@ -258,7 +259,7 @@ body {
     font-size: 16px;
   }
 
-  .footer {
+  .bottom-line {
     bottom: 25px;
   }
 
@@ -284,7 +285,7 @@ body {
     font-size: 26px;
   }
 
-  .footer {
+  .bottom-line {
     width: 768px;
   }
 
@@ -304,7 +305,7 @@ body {
     padding: 0 15px;
   }
 
-  .header__link {
+  .logo-block__link {
     max-height: 35px;
     margin-right: 20px;
   }
@@ -333,7 +334,7 @@ body {
     font-size: 14px;
   }
 
-  .footer {
+  .bottom-line {
     justify-content: center;
     width: calc(100% - 30px);
   }
